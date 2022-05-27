@@ -1,5 +1,13 @@
-package co.com.tdea;
+package com.tdea;
 
+import co.com.tdea.Consumo;
+import co.com.tdea.Entrada;
+import com.tdea.Postre;
+import com.tdea.Vegano;
+import com.tdea.Mixto;
+import com.tdea.Bebidas_Frias_Alcoholica;
+import com.tdea.NoAlcoholica;
+import com.tdea.Bebida_Calientes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +20,7 @@ public class FabricaDeConsumos {
         do {
             opc = Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese el numero de la adicion que desea \n"
                     + "1. Endulzante\n"
-                    + "2. Instacrem\n"
+                    + "2. Instacream\n"
                     + "3. Stevia\n"
                     + "0. Ninguna"));
 
@@ -50,21 +58,21 @@ public class FabricaDeConsumos {
         AgregarAdicionCaliente(adiciones);
         switch (dato) {
             case 1: {
-                String nombre = "Café Moca";
-                double precio = 10000;
+                String nombre = "Café Mocca";
+                double precio = 7500;
                 int tamano = 350;
                 //String nombre, double precio, double tamanio,Map<String, Object> adiciones
                 return new Bebida_Calientes (nombre, precio, tamano,adiciones);
             }
             case 2: {
-                String nombre = "Atole";
-                double precio = 12000;
+                String nombre = "Matcha";
+                double precio = 8000;
                 int tamano = 600;
                 return new Bebida_Calientes (nombre, precio, tamano,adiciones);
             }
             case 3: {
-                String nombre = "Café Frutal";
-                double precio = 8000;
+                String nombre = "Cappuccino";
+                double precio = 7000;
                 int tamano = 400;
                 return new Bebida_Calientes (nombre, precio, tamano,adiciones);
             }            
@@ -81,9 +89,9 @@ public class FabricaDeConsumos {
         switch (dato) {
             case 1: {
                 boolean compartir = true;
-                String nombre = "Punta de Anca";
-                double precio = 40000;
-                String ingredientes = "Carne y Papas";
+                String nombre = "costillas BBQ";
+                double precio = 35000;
+                String ingredientes = "costillas y Papas";
                 NoAlcoholica bebida = new NoAlcoholica("Gaseosa",3000,350,"Club",15.5);
                 return new Mixto(salsas, bebida, ingredientes, nombre, precio);
                
@@ -92,7 +100,7 @@ public class FabricaDeConsumos {
                 boolean compartir = true;
                 String nombre = "Bandeja Paisa";
                 double precio = 25000;
-                String ingredientes = "Frijoles y chicharron";
+                String ingredientes = "Frijoles,huevo cocido, tajada de maduro, chorizo,aguacate, carne molida, arroz, chicharron, arepa redonda";
                 NoAlcoholica bebida = new NoAlcoholica("Guarapo",2000,250,"Club",5.5);
                 return new Mixto(salsas, bebida, ingredientes, nombre, precio);
             }
@@ -114,9 +122,9 @@ public class FabricaDeConsumos {
         int opc;
         do {
             opc = Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese el numero de la adicion que desea \n"
-                    + "1. para Guacamole\n"
-                    + "2. para Rosada\n"
-                    + "3. Mayonesa\n"
+                    + "1. Guacamole\n"
+                    + "2. Bolognesa\n"
+                    + "3. Bechamel\n"
                    
                     + "0. para continuar"));
             switch (opc) {
@@ -125,11 +133,11 @@ public class FabricaDeConsumos {
                     break;
                 }
                 case 2: {
-                    salsas.add("Rosada");
+                    salsas.add("Bolognesa");
                     break;
                 }
                 case 3: {
-                     salsas.add("Mayonesa");
+                     salsas.add("Bechamel");
                     break;
                 }
                 
@@ -144,24 +152,24 @@ public class FabricaDeConsumos {
                 String nombre = "Jugo del Día";
                 double precio = 18000;
                 double tamanio = 150;
-                String marca = "Club";
-                double gramajeAzucar = 15.6;
+                String marca = "Natural";
+                double gramajeAzucar = 5.0;
                return new NoAlcoholica(nombre,precio,tamanio,marca,gramajeAzucar);  
             } 
             case 2 :{
                 String nombre = "Soda";
                 double precio = 8000;
                 double tamanio = 150;
-                String marca = "Club";
-                double gramajeAzucar = 15.6;
+                String marca = "Bretaña";
+                double gramajeAzucar = 0.0;
                return new NoAlcoholica(nombre,precio,tamanio,marca,gramajeAzucar);  
             }   
             case 3:{
                 String nombre = "Gaseosa";
                 double precio = 3000;
                 double tamanio = 350;
-                String marca = "Club";
-                double gramajeAzucar = 35.6;
+                String marca = "Coca-cola";
+                double gramajeAzucar = 12.0;
                return new NoAlcoholica(nombre,precio,tamanio,marca,gramajeAzucar);  
             }   
             
@@ -178,7 +186,7 @@ public class FabricaDeConsumos {
                 String nombre = "Margarita";
                 double precio = 25000;
                 double tamanio = 150;
-                String marca = "Club";
+                String marca = "Jose Cuervo";
                 double gradoAlcohol = 25.6;
                return new Bebidas_Frias_Alcoholica(nombre,precio,tamanio,marca,gradoAlcohol);  
             }
@@ -186,7 +194,7 @@ public class FabricaDeConsumos {
                 String nombre = "Mojito";
                 double precio = 35000;
                 double tamanio = 250;
-                String marca = "Club";
+                String marca = "Bacardi";
                 double gradoAlcohol = 45.6;
                return new Bebidas_Frias_Alcoholica(nombre,precio,tamanio,marca,gradoAlcohol);  
             }
@@ -194,7 +202,7 @@ public class FabricaDeConsumos {
                 String nombre = "Piña Colada";
                 double precio = 15000;
                 double tamanio = 170;
-                String marca = "Club";
+                String marca = "Tahiti";
                 double gradoAlcohol = 15.6;
                return new Bebidas_Frias_Alcoholica(nombre,precio,tamanio,marca,gradoAlcohol);  
             }  
@@ -209,14 +217,14 @@ public class FabricaDeConsumos {
         switch (dato) {
             case 1: {
                 String nombre = "tres leches";
-                String ingredientes = "gelatina de colores, leche entera, crema de leche, lecherita";
+                String ingredientes = "gelatina sin sabor, leche entera, crema de leche, lecherita, azucar, mantequilla";
                 String endulzante = "lecherita"; // preguntar al usuario
                 double precio = 20000;
                 return new Postre(endulzante, ingredientes, nombre, precio);
             }
             case 2: {
-                String nombre = "limon";
-                String ingredientes = "crema de leche, leche entera, limon";
+                String nombre = "cheesecake limon";
+                String ingredientes = "crema de leche, leche entera, limon, galletas, gelatina sin sabor, mantequilla";
                 String endulzante = "lecherita"; // preguntar al usuario
                 double precio = 20000;
                 return new Postre(endulzante, ingredientes, nombre, precio);
@@ -240,10 +248,10 @@ public class FabricaDeConsumos {
             }
             case 2: {
                 boolean compartir = true; // preguntar
-                String nombre = "empanadas x 2";
-                String salsa = "aji";
+                String nombre = "patacones x6";
+                String salsa = "guacamole";
                 double precio = 6000;
-                String ingredientes = "masa, papa, carne";
+                String ingredientes = "patacón, sal";
                 return new Entrada(compartir, salsa, ingredientes, nombre, precio);
             }
             default: {
@@ -259,16 +267,16 @@ public class FabricaDeConsumos {
         switch (dato) {
             case 1: {
                 boolean compartir = true;
-                String nombre = "Ensalada Cesar";
-                double precio = 50000;
-                String ingredientes = "lechuga y hierbas";
+                String nombre = "Ensalada Especial";
+                double precio = 25000;
+                String ingredientes = "lechuga, tomate,zanahoria, rabano, cebolla, pimientos, proteina vegetal, vinagreta, crutones, queso, ";
                 NoAlcoholica bebida = new NoAlcoholica("Limonada",4000,550,"Club",20.5);;
                 return new Vegano(adiciones, bebida, ingredientes, nombre, precio);
             }
             case 2: {
                 boolean compartir = true;
-                String nombre = "Menú Italiano";
-                double precio = 60000;
+                String nombre = "Menú Italiano sin carne";
+                double precio = 20000;
                 String ingredientes = "Pastas y salsa";
                 NoAlcoholica bebida = new NoAlcoholica("Coca Cola",4000,550,"Club",20.5);;
                 return new Vegano(adiciones, bebida, ingredientes, nombre, precio);

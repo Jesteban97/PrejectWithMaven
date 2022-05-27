@@ -1,4 +1,4 @@
-package co.com.tdea;
+package com.tdea;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,16 +14,11 @@ import javax.swing.JOptionPane;
 
 
 
-
-/**
- *
- * @author NMEJIA
- */
 public class Conexion_BD {
     
     
     public static Connection getConexion(){
-        String consqlnew = "jdbc:sqlserver://localhost:1433;user=sa;password=asdf123.;database=Club;encrypt=true;trustServerCertificate=true";
+        String consqlnew = "jdbc:sqlserver://wdb4.my-hosting-panel.com:1433;user=abicomco_users;password=!oj338I6;database=abicomco_users;encrypt=true;trustServerCertificate=true";
         
         try{
           Connection con = DriverManager.getConnection(consqlnew);          

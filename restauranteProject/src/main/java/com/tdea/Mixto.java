@@ -1,4 +1,4 @@
-package co.com.tdea;
+package com.tdea;
 
 import java.util.ArrayList;
 

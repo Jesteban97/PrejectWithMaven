@@ -1,4 +1,6 @@
-package co.com.tdea;
+package com.tdea;
+
+import co.com.tdea.Consumo;
 
 public abstract class Plato extends Consumo {
     private String ingredientes;

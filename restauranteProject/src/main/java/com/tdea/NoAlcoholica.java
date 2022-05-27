@@ -1,4 +1,4 @@
-package co.com.tdea;
+package com.tdea;
 
 public class NoAlcoholica extends Bebida_Frias {
     private double gramajeAzucar;

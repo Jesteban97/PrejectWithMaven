@@ -5,6 +5,7 @@
  */
 package co.com.tdea;
 
+import com.tdea.Conexion_BD;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.sql.Connection;

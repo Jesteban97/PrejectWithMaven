@@ -1,4 +1,4 @@
-package co.com.tdea;
+package com.tdea;
 
 public class Postre extends Plato{
     private String endulzante;

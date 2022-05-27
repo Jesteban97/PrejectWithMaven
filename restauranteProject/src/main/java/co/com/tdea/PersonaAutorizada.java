@@ -4,6 +4,8 @@
  */
 package co.com.tdea;
 
+import com.tdea.Conexion_BD;
+import com.tdea.FabricaDeConsumos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

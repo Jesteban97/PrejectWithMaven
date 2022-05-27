@@ -4,6 +4,7 @@
  */
 package co.com.tdea;
 
+import com.tdea.Conexion_BD;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;

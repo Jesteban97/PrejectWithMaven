@@ -4,6 +4,7 @@
  */
 package co.com.tdea;
 
+import com.tdea.Conexion_BD;
 import javax.swing.JOptionPane;
 import java.io.File;
 import java.io.BufferedReader;

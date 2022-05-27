@@ -1,5 +1,7 @@
 package co.com.tdea;
 
+import com.tdea.Plato;
+
 public class Entrada extends Plato {
 
     private boolean compartir;

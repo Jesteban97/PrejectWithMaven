@@ -1,4 +1,4 @@
-package co.com.tdea;
+package com.tdea;
 
 public abstract class PlatoFuerte extends Plato {
     private NoAlcoholica bebida;
